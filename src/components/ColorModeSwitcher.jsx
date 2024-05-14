@@ -20,7 +20,7 @@ export function ColorModeSwitcher() {
     // Check for saved theme in cookies and change style accordingly
     const savedTheme = cookies.theme;
     if (savedTheme) {
-      document.body.style = savedTheme === 'dark' ? 'background: #ffe7fd;' : 'background: #79305a;';
+      document.body.style = savedTheme === 'light' ? 'background: #ffe7fd;' : 'background: #79305a;';
     }
   }, [cookies]);
 
