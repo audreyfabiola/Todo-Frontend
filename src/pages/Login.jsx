@@ -43,7 +43,7 @@ export default function Login() {
         // Set cookies for session and user ID
         const cookies = new Cookies();
         cookies.set('user_id', data.user_id, { path: '/' });
-        await cookies.set('session_id', data.session_id);
+        await cookies.set('session_id', data.session_id.replace(/"/g, ''));
         await cookies.set('user_id', data.user_id);
         toast.success('Login successful!');
         console.log('Redirecting to /homepage...');
